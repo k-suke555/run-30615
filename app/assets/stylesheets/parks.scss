@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #d2ffd2;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  background-color: #b0ffb0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-park {
+  padding: 20px;
+}
+
+.parks-new-form {
+  padding-left: 50px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.park-box {
+  padding-left: 40px;
+}
+
+.park-box-image {
+  height: 20vh;
+  width: 30vw;
+  min-height: 300px;
+  object-fit: contain;
+}
+
+.map {
+  height: 20vh;
+  width: 30vw;
+  min-height: 300px;
+}

@@ -1,0 +1,21 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to("トップページ", "/") %>
+  </div>
+  <div class="create-park">
+    <%= link_to "コースの追加", new_park_path %>
+  </div>
+</div>
+<div class="parks">
+  <div class="park">
+    <ul class="list">
+      <% @parks.each do |park|%>
+        <li class="park">
+          <%= link_to park_path(park) do %>
+            <%= park.name %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
