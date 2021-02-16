@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   before_action :set_parks
-  before_action :set_park, only: [:show, :edit, :update]
+  before_action :set_park, only: [:show, :edit, :update, :destroy]
   
   def index
   end
@@ -29,6 +29,14 @@ class ParksController < ApplicationController
       redirect_to park_path(@park)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @park.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
     end
   end
 
