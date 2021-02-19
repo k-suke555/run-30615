@@ -7,8 +7,10 @@
       <h2 class="name">
         <%= @park.name %>
       </h2>
-      <%= link_to "編集する", edit_park_path %>
-      <%= link_to "削除する", park_path(@park.id), method: :delete %>
+      <% if user_signed_in? && (current_user.id == 1) %>
+        <%= link_to "編集する", edit_park_path %>
+        <%= link_to "削除する", park_path(@park.id), method: :delete %>
+      <% end %>
       <div class="park-image-content">
         <%= image_tag @park.image, class:"park-box-image" %>
         <div>
