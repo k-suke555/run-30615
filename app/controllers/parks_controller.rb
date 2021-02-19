@@ -6,7 +6,11 @@ class ParksController < ApplicationController
   end
 
   def new
-    @park = Park.new
+    if current_user.id == 1
+      @park = Park.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -22,6 +26,9 @@ class ParksController < ApplicationController
   end
 
   def edit
+    unless user_signed_in? && current_user.id == 1
+      redirect_to root_path
+    end
   end
 
   def update
