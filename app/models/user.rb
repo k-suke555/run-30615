@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :parks
+  has_many :comments
   with_options presence: true do
     validates :nickname
     validates :password, format: { with: /\A[a-z0-9]+\z/i }
