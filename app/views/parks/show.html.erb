@@ -23,17 +23,16 @@
       <h3>＜コメント一欄＞</h3>
       <% if user_signed_in? %>
         <%= form_with(model: [@park, @comment], local:true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+          <%= form.text_field :text, placeholder: "コメントする", rows: "2" %>
           <%= form.submit "送信" %>
         <% end %>
       <% else %>
           <strong><p>※コメントの投稿には新規登録/ログインが必要です※</p></strong>
       <% end %>
-      <div>
-        <% @comments.each do |comment| %>
+      <div id='comments'>
+        <% @comments.reverse_each do |comment| %>
           <p>
-          <%= comment.user.nickname %>：
-          <%= comment.text %>
+          <%= "#{comment.user.nickname}:#{comment.text}" %>
           </p>
         <% end %>
       </div>
