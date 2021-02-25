@@ -7,4 +7,9 @@ class Park < ApplicationRecord
   end
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :area
+
+  validates :area_id, numericality: { other_than: 1 }
 end
