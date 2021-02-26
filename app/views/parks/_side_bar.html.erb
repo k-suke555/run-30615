@@ -17,15 +17,69 @@
 </div>
 
 <div class="parks">
-  <div class="park">
-    <ul class="list">
+    <ul class="parks_list">
+      福岡市中央区
+      <span>+</span>
       <% @parks.each do |park|%>
-        <li class="park">
-          <%= link_to park_path(park) do %>
-            <%= park.name %>
-          <% end %>
-        </li>
+        <% if park.area_id == 2 %>
+          <li class="park">
+            <%= link_to park_path(park) do %>
+              <%= park.name %>
+            <% end %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
-  </div>
+    <ul class="parks_list">
+      福岡市博多区
+      <span>+</span>
+      <% @parks.each do |park|%>
+        <% if park.area_id == 3 %>
+          <li class="park">
+            <%= link_to park_path(park) do %>
+              <%= park.name %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <ul class="parks_list">
+      福岡市東区
+      <span>+</span>
+      <% @parks.each do |park|%>
+        <% if park.area_id == 4 %>
+          <li class="park">
+            <%= link_to park_path(park) do %>
+              <%= park.name %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <ul class="parks_list">
+      福岡市南区
+      <span>+</span>
+      <% @parks.each do |park|%>
+        <% if park.area_id == 5 %>
+          <li class="park">
+            <%= link_to park_path(park) do %>
+              <%= park.name %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <ul class="parks_list">
+      上記以外
+      <span>+</span>
+      <% @parks.each do |park|%>
+        <% if park.area_id == 6 %>
+          <li class="park">
+            <%= link_to park_path(park) do %>
+              <%= park.name %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
 </div>
