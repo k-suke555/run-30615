@@ -27,6 +27,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_field :address, class:"park-address", placeholder:"住所" %>
+      <%= f.collection_select(:area_id, Area.all, :id, :name, {}) %>
     </div>
     <%= f.submit "登録する" %>
   <% end %>

@@ -61,3 +61,5 @@ gem 'geocoder'
 gem 'dotenv-rails'
 
 gem 'devise'
+
+gem 'active_hash'

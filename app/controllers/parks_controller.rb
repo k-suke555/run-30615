@@ -51,7 +51,7 @@ class ParksController < ApplicationController
 
   private
   def park_params
-    params.require(:park).permit(:name, :address, :image, :latitude, :longitude).merge(user_id: current_user.id)
+    params.require(:park).permit(:name, :address, :image, :latitude, :longitude, :area_id).merge(user_id: current_user.id)
   end
 
   def set_parks
