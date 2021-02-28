@@ -28,12 +28,21 @@
 
 .parks {
   padding: 25px;
+  overflow: scroll;
 }
 
 .park {
   display: none;
   padding: 0 20px;
   list-style: none;
+}
+
+.bg-image {
+  background-image: image-url('run_background.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
 }
 
 .login-list {
@@ -57,6 +66,12 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.park-show {
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw
 }
 
 .park-box {
